@@ -212,7 +212,7 @@ async def ee(client, message):
     if stats:
         await message.reply(stats)
     else:
-        await message.reply("Buka VCG dulu jelek!")
+        await message.reply("Buka VCG dulu kontol!")
 
 
 @Client.on_message(filters.command("player") & filters.group & ~filters.edited)
@@ -307,7 +307,7 @@ async def p_cb(b, cb):
                 name = song[0]
                 usr = song[1].mention(style="md")
                 msg += f"\n- {name}"
-                msg += f"\n- Permintaan si kontol{usr}\n"
+                msg += f"\n- Permintaan si jamet{usr}\n"
         await cb.message.edit(msg)
 
 
@@ -432,7 +432,7 @@ async def m_cb(b, cb):
                 await cb.answer.reply_text("✅ <b>Skipped</b>")
                 await cb.message.edit((m_chat, qeue), reply_markup=r_ply(the_data))
                 await cb.message.reply_text(
-                    f"- Skipped track\n- sekarang ngocok **{qeue[0][0]}**"
+                    f"- Skipped track\n- sekarang ngecrot **{qeue[0][0]}**"
                 )
 
     else:
@@ -454,7 +454,7 @@ async def play(_, message: Message):
     global useer
     if message.chat.id in DISABLED_GROUPS:
         return
-    lel = await message.reply("⏳ <b>sabar lagi ngocok</b>")
+    lel = await message.reply("⏳ <b>sabar lagi cari jamet</b>")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -546,7 +546,7 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             await lel.edit(
-                f"❌ durasi ngocok lebih dari {DURATION_LIMIT} menit(s) gabisa mulai anjing !"
+                f"❌ durasi ngelonte lebih dari {DURATION_LIMIT} menit(s) gabisa mulai anjing !"
             )
             return
         keyboard = InlineKeyboardMarkup(
@@ -573,7 +573,7 @@ async def play(_, message: Message):
         )
     elif urls:
         query = toxt
-        await lel.edit("⏳ **Sabar lagi ngocok**")
+        await lel.edit("⏳ **Sabar lagi ngejamet**")
         ydl_opts = {"format": "bestaudio/best"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -601,7 +601,7 @@ async def play(_, message: Message):
                 secmul *= 60
             if (dur / 60) > DURATION_LIMIT:
                 await lel.edit(
-                    f"❌ durasi ngocok lebih dari {DURATION_LIMIT} menit gabisa mulai anjing!"
+                    f"❌ durasi ngelonte lebih dari {DURATION_LIMIT} menit gabisa mulai anjing!"
                 )
                 return
         except:
@@ -629,7 +629,7 @@ async def play(_, message: Message):
         for i in message.command[1:]:
             query += " " + str(i)
         print(query)
-        await lel.edit("⏳ **Sabar lagi ngocok**")
+        await lel.edit("⏳ **Sabar lagi ngejamet**")
         ydl_opts = {"format": "bestaudio/best"}
 
         try:
@@ -712,7 +712,7 @@ async def play(_, message: Message):
                     secmul *= 60
                 if (dur / 60) > DURATION_LIMIT:
                     await lel.edit(
-                        f"❌ durasi ngocok lebih dari {DURATION_LIMIT} menit gabisa di mulai anjing!"
+                        f"❌ durasi ngelonte lebih dari {DURATION_LIMIT} menit gabisa di mulai anjing!"
                     )
                     return
             except:
@@ -768,7 +768,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ <b>ngocok</b> sesuatu permintaan si kontol {} via Youtube Music 😎".format(
+            caption="▶️ <b>ngocok</b> sesuatu permintaan si jamet {} via Youtube Music 😎".format(
                 message.from_user.mention()
             ),
         )
@@ -781,7 +781,7 @@ async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
         return
-    lel = await message.reply("🔄 <b>sabar ya ngentot</b>")
+    lel = await message.reply("🔄 <b>sabar ya kontol</b>")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -834,7 +834,7 @@ async def ytplay(_, message: Message):
             f"<i> {user.first_name} Userbot not in this chat, Ask admin to send /play command for first time or add {user.first_name} manually</i>"
         )
         return
-    await lel.edit("🔎 <b>cari kuburan bapak lu</b>")
+    await lel.edit("🔎 <b>cari lonte buat lu</b>")
     message.from_user.id
     message.from_user.first_name
 
@@ -842,7 +842,7 @@ async def ytplay(_, message: Message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    await lel.edit("🎵 <b>sabar ya ngentot</b>")
+    await lel.edit("🎵 <b>sabar ya kontol</b>")
     ydl_opts = {"format": "bestaudio/best"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -868,7 +868,7 @@ async def ytplay(_, message: Message):
             secmul *= 60
         if (dur / 60) > DURATION_LIMIT:
             await lel.edit(
-                f"❌ durasi ngocok lebih dari {DURATION_LIMIT} menit gabisa di mulai anjing!"
+                f"❌ durasi ngelonte lebih dari {DURATION_LIMIT} menit gabisa di mulai anjing!"
             )
             return
     except:
@@ -924,7 +924,7 @@ async def ytplay(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ <b>ngocok</b> sesuatu permintaan si kontol {} via Youtube Music 😎".format(
+            caption="▶️ <b>ngocok</b> sesuatu permintaan si jamet {} via Youtube Music 😎".format(
                 message.from_user.mention()
             ),
         )
@@ -937,7 +937,7 @@ async def jiosaavn(client: Client, message_: Message):
     global que
     if message_.chat.id in DISABLED_GROUPS:
         return
-    lel = await message_.reply("🔄 <b>cari kuburan bapak lu</b>")
+    lel = await message_.reply("🔄 <b>cari lonte buat lu</b>")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
@@ -1013,7 +1013,7 @@ async def jiosaavn(client: Client, message_: Message):
         duuration = round(sduration / 60)
         if duuration > DURATION_LIMIT:
             await cb.message.edit(
-                f"durasi ngocok lebih dari {DURATION_LIMIT} menit gabisa di play anjing"
+                f"durasi ngelonte lebih dari {DURATION_LIMIT} menit gabisa di play anjing"
             )
             return
     except:
@@ -1047,11 +1047,11 @@ async def jiosaavn(client: Client, message_: Message):
             chat_id=message_.chat.id,
             reply_markup=keyboard,
             photo="final.png",
-            caption=f"✯{bn}✯=#️⃣ antrian bansos ke {position}",
+            caption=f"✯{bn}✯=#️⃣ antrian ngelonte ke {position}",
         )
 
     else:
-        await res.edit_text(f"{bn}=▶️ ngocok.....")
+        await res.edit_text(f"{bn}=▶️ ngelonte.....")
         que[chat_id] = []
         qeue = que.get(chat_id)
         s_name = sname
@@ -1087,7 +1087,7 @@ async def lol_cb(b, cb):
     try:
         x, query, useer_id = typed_.split("|")
     except:
-        await cb.message.edit("busehh ga nemu lagunya goblok!")
+        await cb.message.edit("busehh ga nemu lagunya kontol!")
         return
     useer_id = int(useer_id)
     if cb.from_user.id != useer_id:
@@ -1117,7 +1117,7 @@ async def lol_cb(b, cb):
             secmul *= 60
         if (dur / 60) > DURATION_LIMIT:
             await cb.message.edit(
-                f"durasi ngocok lebih dari {DURATION_LIMIT} menit gabisa di play anjing"
+                f"durasi ngewe lebih dari {DURATION_LIMIT} menit gabisa di play anjing"
             )
             return
     except:
@@ -1162,7 +1162,7 @@ async def lol_cb(b, cb):
         await b.send_photo(
             chat_id,
             photo="final.png",
-            caption=f"#⃣  Song permintaan si {r_by.mention()} <b>queued</b> antrian bansos ke {position}!",
+            caption=f"#⃣  Song permintaan si jamet {r_by.mention()} <b>queued</b> antrian ngelonte ke {position}!",
             reply_markup=keyboard,
         )
         os.remove("final.png")
@@ -1185,6 +1185,6 @@ async def lol_cb(b, cb):
             chat_id,
             photo="final.png",
             reply_markup=keyboard,
-            caption=f"▶️ <b>ngocok</b> sesuatu permintaan si kontol {r_by.mention()} via Youtube Music 😎",
+            caption=f"▶️ <b>ngocok</b> sesuatu permintaan si jamet {r_by.mention()} via Youtube Music 😎",
         )
         os.remove("final.png")
