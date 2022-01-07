@@ -78,7 +78,7 @@ async def resume(_, message: Message):
 async def stop(_, message: Message):
     chat_id = get_chat_id(message.chat)
     if chat_id not in callsmusic.active_chats:
-        await message.reply_text("❗ Ga ada lagu yg lagi dimainin jelek!")
+        await message.reply_text("❗ Ga ada lonte yg lagi dimainin kntl!")
     else:
         try:
             queues.clear(chat_id)
@@ -96,7 +96,7 @@ async def skip(_, message: Message):
     global que
     chat_id = get_chat_id(message.chat)
     if chat_id not in callsmusic.active_chats:
-        await message.reply_text("❗ Apaan yg mau diskip anjing, nyawa bapak lu?")
+        await message.reply_text("❗ Apaan yg mau diskip anjing, bayar dulu ngentot?")
     else:
         queues.task_done(chat_id)
         if queues.is_empty(chat_id):
@@ -109,7 +109,7 @@ async def skip(_, message: Message):
         skip = qeue.pop(0)
     if not qeue:
         return
-    await message.reply_text(f"- Skip lagu apaansi jelek banget **{skip[0]}**\n- Nah ni baru enak lagunya **{qeue[0][0]}**")
+    await message.reply_text(f"- Skip desahan apaansi jelek banget **{skip[0]}**\n- Nah ni baru enak desahnya **{qeue[0][0]}**")
     
 
 @Client.on_message(command('mute') & other_filters)
