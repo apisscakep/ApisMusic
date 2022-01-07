@@ -1,4 +1,4 @@
-<h1 align="center">Sielzz Music 🎵</h1>
+<h1 align="center">Apiss Music 🎵</h1>
 
 ### A bot that can play music on Telegram Group and Channel Voice Chats
 #### POWERED BY [SIELZZ TGCALLS](https://github.com/sielzz/tgcalls)
@@ -26,7 +26,7 @@
 
 ### 💜 Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sielzz/SielzzMusic)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/apisscakep/ApisMusic)
 
 Get pyrogram (p)  `SESSION` from here:
 
